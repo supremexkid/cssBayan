@@ -49,7 +49,7 @@ input:checked ~ .acor-title {
   height: 20px;
   right: 10px;
 
-  background-image: url(/icons/icons8-плюс.svg);
+  background-image: url(icons/icons8-плюс.svg);
   background-repeat: no-repeat;
   background-position: 100% 100%;
   background-size: cover;
@@ -71,7 +71,7 @@ input:checked ~ .acor-title {
   height: 20px;
   right: 10px;
 
-  background-image: url(/icons/icons8-отмена.svg);
+  background-image: url(icons/icons8-отмена.svg);
   background-repeat: no-repeat;
   background-position: 100% 100%;
   background-size: cover;
