@@ -1,0 +1,116 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.accorndion-container {
+  border-bottom: 2px solid #e7ecff;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.main-text {
+  font-weight: 500;
+  border-bottom: 2px solid #e7ecff;
+  margin: 0;
+  padding-bottom: 10px;
+}
+.inner-container:hover > .accorndion-container > .acor-title {
+  color: #030303;
+}
+
+input:checked ~ .acor-title {
+  color: #030303;
+}
+.acor-title {
+  display: block;
+  color: rgb(60, 151, 148);
+  cursor: pointer;
+  padding: 10px 12px;
+  transition: background 0.3s;
+  position: relative;
+  font-weight: 500;
+}
+
+.inner-container:hover > .accorndion-container > .acor-title:after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  right: 10px;
+
+  background-image: url(/icons/icons8-плюс.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
+  transition: opacity 3s ease-in-out;
+  z-index: 1;
+}
+
+.acor-input {
+  width: 0;
+  height: 0;
+  appearance: none;
+  position: absolute;
+}
+
+.acor-input:checked ~ .acor-title:hover::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  right: 10px;
+
+  background-image: url(/icons/icons8-отмена.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
+  transition: opacity 3s ease-in-out;
+  z-index: 1;
+}
+
+.acor-input:checked ~ .acor-body {
+  display: block;
+}
+
+.acor-body {
+  display: none;
+  padding-bottom: 10px;
+}
+
+.acor-text {
+  color: blueviolet;
+  padding: 0px 5px;
+}
+
+.acor-img {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation: some-animation;
+  animation-duration: 2s;
+}
+
+@keyframes some-animation {
+  from {
+    width: 100px;
+    height: 100px;
+  }
+
+  to {
+    width: 300px;
+    height: 300px;
+  }
+}
